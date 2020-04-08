@@ -1,7 +1,7 @@
 const net = require("net");
 d = {port: 7777}
 client = new net.Socket();
-beklemeSuresi = 10000;
+
 
 
 tumu = () => {
@@ -48,7 +48,7 @@ tumu = () => {
             console.log( {serverData:data, str:data.toString()} );
             setTimeout( () => {
                 client.write(data);
-            }, beklemeSuresi );
+            }, process.argv[4] );
         });
         
     });
@@ -64,7 +64,7 @@ tumu = () => {
 
 
 
-if ( process.argv[2] && process.argv[3] ){
+if ( process.argv[2] && process.argv[3] && process.argv[4] ){
     tumu();
 }
 else{
