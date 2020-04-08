@@ -1,5 +1,5 @@
 const net = require("net");
-d = {port: 7777}
+d = {port: 27015}
 client = new net.Socket();
 
 
@@ -73,7 +73,7 @@ else{
     console.log( "" );
     console.log( "ListeningPort :* "+d.port );
     console.log(  );
-    console.log( "Usage: nodemon portForwarding.js 192.168.2.12 8888" );
+    console.log( "Usage: nodemon portForwarding.js 192.168.2.12 8888 5000(seconds)" );
     console.log( "" );
     console.log( "############################################" );
     console.log( "" );
