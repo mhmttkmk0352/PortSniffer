@@ -1,5 +1,5 @@
 const net = require("net");
-d = {port: 27015}
+d = {port: 7777}
 client = new net.Socket();
 
 
@@ -7,7 +7,8 @@ client = new net.Socket();
 tumu = () => {
     istemci = (tcpSocket) => {
         client.connect(process.argv[3], process.argv[2], () => {
-    
+            console.log("Bağlandı");
+            console.log("");
         });
         
         client.on("data", data => {
